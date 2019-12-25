@@ -20,11 +20,11 @@ spring:
 # 数据源
   datasource:
       name: test
-      url: jdbc:mysql://127.0.0.1:3306/jpa?useUnicode=true&characterEncoding=utf-8
+      url: jdbc:mysql://localhost:3306/microservice-auth?serverTimezone=UTC&?useUnicode=true&characterEncoding=utf8&useSSL=false
       username: root
-      password:
+      password: 123
       type: com.alibaba.druid.pool.DruidDataSource #使用drudi数据源
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
       filters: stat,wall,log4j
       maxActive: 200
       initialSize: 1
@@ -43,7 +43,7 @@ spring:
     database: 0
     host: localhost
     port: 6379
-    password:
+    password: test123
     pool:
       max-active: 8
       max-wait: -1
